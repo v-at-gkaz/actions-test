@@ -5,19 +5,19 @@ on:
     branches: ["main"]
 
 jobs:
-  clone:
+  build_spa:
     runs-on: alt-runner
 
     steps:
     - uses: actions/checkout@v2
     - name: Get Last Code
       run: git clone --single-branch --branch main https://github.com/v-at-gkaz/js-sandbox-2024
-
-  build:
-    needs: clone
-    runs-on: alt-runner
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Get Last Code
+      
+    - name: Build SPA
       run: cd $GITHUB_WORKSPACE/js-sandbox-2024/project_18_spa && npm ci && npm run build
+
+    - name: Upload bandle as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: spa-bundle
+        path: $GITHUB_WORKSPACE/js-sandbox-2024/project_18_spa/build
