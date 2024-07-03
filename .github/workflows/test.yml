@@ -5,13 +5,18 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  clonre:
     runs-on: alt-runner
 
     steps:
     - uses: actions/checkout@v2
     - name: Get Last Code
       run: git clone -single-branch --branch main https://github.com/v-at-gkaz/js-sandbox-2024
+
+  build:
+    runs-on: alt-runner
+
+    steps:
     - uses: actions/checkout@v2
-    - name: Build
+    - name: Get Last Code
       run: cd js-sandbox-2024 && npm ci && npm run build
