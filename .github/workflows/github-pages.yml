@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build_pages:
     runs-on: alt-runner
 
     steps:
