@@ -14,10 +14,10 @@ jobs:
       run: git clone --single-branch --branch main https://github.com/v-at-gkaz/js-sandbox-2024
       
     - name: Build SPA
-      run: cd $GITHUB_WORKSPACE/js-sandbox-2024/project_18_spa && npm ci && npm run build
+      run: cd js-sandbox-2024/project_18_spa && npm ci && npm run build
 
     - name: Upload bandle as artifact
       uses: actions/upload-artifact@v3
       with:
         name: spa-bundle
-        path: $GITHUB_WORKSPACE/js-sandbox-2024/project_18_spa/dist/spa
+        path: js-sandbox-2024/project_18_spa/dist/spa/
