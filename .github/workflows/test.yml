@@ -20,4 +20,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: spa-bundle
-        path: $GITHUB_WORKSPACE/js-sandbox-2024/project_18_spa/build
+        path: $GITHUB_WORKSPACE/js-sandbox-2024/project_18_spa/dist/spa
