@@ -5,13 +5,13 @@ on:
     branches: ["main"]
 
 jobs:
-  clonre:
+  clone:
     runs-on: alt-runner
 
     steps:
     - uses: actions/checkout@v2
     - name: Get Last Code
-      run: git clone -single-branch --branch main https://github.com/v-at-gkaz/js-sandbox-2024
+      run: git clone --single-branch --branch main https://github.com/v-at-gkaz/js-sandbox-2024
 
   build:
     runs-on: alt-runner
