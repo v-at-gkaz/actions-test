@@ -19,4 +19,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Get Last Code
-      run: cd $GITHUB_WORKSPACE/js-sandbox-2024 && npm ci && npm run build
+      run: cd $GITHUB_WORKSPACE/js-sandbox-2024/project_18_spa && npm ci && npm run build
